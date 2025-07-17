@@ -1,1 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Julius+Sans+One&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-night: #141414;
+  --color-blackBean: #4b1010;
+  --color-xanthous: #ffb43b;
+  --color-seashell: #f7ebe8;
+  --color-fireBrick: #b72929;
+
+  --font-italiana: "Italiana", sans-serif;
+  --font-juliusSansOne: "Julius Sans One", sans-serif;
+  --font-kurb: "Krub", sans-serif;
+}
