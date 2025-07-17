@@ -12,3 +12,7 @@
   --font-juliusSansOne: "Julius Sans One", sans-serif;
   --font-kurb: "Krub", sans-serif;
 }
+
+body{
+  background: var(--color-seashell);
+}
