@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from './Components/Navbar'
 import InitialForm from './Pages/InitialForm'
 import Homepage from './Pages/Homepage'
+import Footer from './Components/Footer'
 
 const App = () => {
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'))
@@ -21,6 +22,7 @@ const App = () => {
           ? <Homepage />
           : <InitialForm onSetNickname={handleSetNickname} />
       }
+      <Footer />
     </div>
   )
 }
