@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div className='flex justify-between bg-xanthous px-4 lg:px-26 py-2'>
+        <div className='flex justify-between bg-xanthous px-4 lg:px-26 py-2 z-10'>
             <div className='flex gap-2 lg:gap-4'>
                 <img
                     src="/Breakfast Streamline Lagos.png"
