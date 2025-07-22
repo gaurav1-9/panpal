@@ -22,7 +22,6 @@ const App = () => {
           ? <Homepage />
           : <InitialForm onSetNickname={handleSetNickname} />
       }
-      <Footer />
     </div>
   )
 }

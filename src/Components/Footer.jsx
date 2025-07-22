@@ -17,7 +17,7 @@ const Footer = () => {
                 <FcLike />
                 <p>by GAURAV KUMAR DAS</p>
             </div>
-            <div className="flex item-center gap-4 text-3xl lg:pb-2">
+            <div className="flex item-center gap-4 text-3xl pb-2">
                 <a
                     href="https://www.instagram.com/gaurav1_9/"
                     target='_blank'

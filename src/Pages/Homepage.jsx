@@ -11,7 +11,7 @@ const Homepage = () => {
         setRecipe(localStorage.getItem('recipe'))
     }, [recipe])
     return (
-        <div className='px-4 lg:px-26 mt-12 font-kurb h-fit bg-green-300'>
+        <div className='px-4 lg:px-26 mt-12 font-kurb h-fit'>
             <p className='flex flex-wrap font-kurb text-4xl lg:text-6xl text-blackBean font-semibold capitalize'>
                 Hey, {nickname.split(" ")[0]}...
             </p>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaArrowRightLong } from "react-icons/fa6"
+import Footer from '../Components/Footer'
 
 const InitialForm = ({ onSetNickname }) => {
     const [nickname, setNickname] = useState("")
@@ -18,12 +19,12 @@ const InitialForm = ({ onSetNickname }) => {
                 ? '-top-full'
                 : 'top-0'
             } duration-700 ease-in-out h-full w-full bg-xanthous flex justify-center items-center px-6 lg:px-26 flex-col font-kurb gap-4 lg:gap-8 pb-10 text-night`}>
-            <p className='text-3xl text-center lg:text-5xl font-semibold'>
+            <p className='text-3xl text-center lg:text-4xl xl:text-5xl font-semibold'>
                 Hey <span className='text-seashell uppercase'>foodie</span>...what should we call you?
             </p>
 
             <form
-                className="flex flex-col lg:flex-row w-full lg:w-6/10 gap-2 lg:gap-4"
+                className="flex flex-col lg:flex-row w-full lg:w-9/10 xl:w-6/10 gap-2 lg:gap-4"
                 onSubmit={setName}
             >
                 <input
@@ -38,6 +39,9 @@ const InitialForm = ({ onSetNickname }) => {
                     <FaArrowRightLong className='text-xl lg:text-3xl' />
                 </button>
             </form>
+            <div className='absolute bottom-0'>
+                <Footer />
+            </div>
         </div>
     )
 }
