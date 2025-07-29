@@ -23,7 +23,7 @@ const Homepage = () => {
         }
     }, [showMsg])
     return (
-        <div className='px-4 lg:px-26 mt-5 lg:mt-12 font-kurb h-fit'>
+        <div className='px-4 lg:px-26 mt-5 lg:mt-12 font-kurb h-fit w-full'>
             {
                 showMsg &&
                 <div className={`z-50 fixed lg:absolute ${(location.state.showMsg)

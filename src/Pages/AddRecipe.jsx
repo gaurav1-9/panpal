@@ -133,7 +133,7 @@ const AddRecipe = () => {
                                 disabled={isSaving}
                             />
                             <select
-                                className="rounded-md bg-blackBean text-seashell px-3"
+                                className="rounded-md bg-blackBean text-seashell px-3 cursor-pointer"
                                 value={category}
                                 onChange={e => setCategory(e.target.value)}
                                 disabled={isSaving}
