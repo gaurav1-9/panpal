@@ -4,8 +4,10 @@ import Button from "../Components/Button";
 import Footer from "../Components/Footer";
 import { FaListCheck } from "react-icons/fa6";
 import { MoonLoader } from "react-spinners";
+import { useNavigate } from "react-router-dom";
 
 const AddRecipe = () => {
+    const navigate = useNavigate()
     const [image, setImage] = useState(null);
     const [category, setCategory] = useState(0)
 
@@ -33,6 +35,12 @@ const AddRecipe = () => {
                 setDishName("")
                 setStep("")
                 setImage(null)
+                navigate('/', {
+                    state: {
+                        showMsg: true
+                    },
+                    replace: true
+                })
             }, 2000);
             const recipeDate = {
                 recipeName: dishName,
@@ -126,7 +134,7 @@ const AddRecipe = () => {
                             />
                             <select
                                 className="rounded-md bg-blackBean text-seashell px-3"
-                                value={0}
+                                value={category}
                                 onChange={e => setCategory(e.target.value)}
                                 disabled={isSaving}
                             >

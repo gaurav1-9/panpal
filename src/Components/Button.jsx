@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Button = ({ icon, text, isSaving }) => {
     return (
         <button

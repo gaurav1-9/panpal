@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Navbar from './Components/Navbar'
 import InitialForm from './Pages/InitialForm'
 import Homepage from './Pages/Homepage'
