@@ -12,7 +12,7 @@ const NoRecipe = () => {
                 <img src="/thinking-face_1f914.png" alt="" className='h-7 lg:h-9' draggable="false" />
             </p>
             <Link to={'/add'}>
-                <Button icon={<FaCirclePlus />} />
+                <Button icon={<FaCirclePlus />} text={"Add Recipe"}/>
             </Link>
             <img src="/Dessert 1 Streamline Lagos.png" alt="desert img" className='mt-5 lg:mt-0' draggable="false" />
             <div className='w-9/10 absolute bottom-0'>
