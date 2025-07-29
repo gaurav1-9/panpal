@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import Navbar from './Components/Navbar'
 import InitialForm from './Pages/InitialForm'
 import Homepage from './Pages/Homepage'
-import Footer from './Components/Footer'
+import { Route, Routes } from 'react-router-dom'
+import AddRecipe from './Pages/AddRecipe'
 
 const App = () => {
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'))
@@ -19,7 +20,10 @@ const App = () => {
       <Navbar />
       {
         nickname
-          ? <Homepage />
+          ? <Routes>
+            <Route path='/' element={<Homepage />} />
+            <Route path='/add' element={<AddRecipe />} />
+          </Routes>
           : <InitialForm onSetNickname={handleSetNickname} />
       }
     </div>

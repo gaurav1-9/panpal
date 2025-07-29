@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCirclePlus } from "react-icons/fa6";
 import Button from '../Components/Button';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const NoRecipe = () => {
     return (
@@ -10,7 +11,9 @@ const NoRecipe = () => {
                 <span>no recipes found</span>
                 <img src="/thinking-face_1f914.png" alt="" className='h-7 lg:h-9' draggable="false" />
             </p>
-            <Button icon={<FaCirclePlus />} />
+            <Link to={'/add'}>
+                <Button icon={<FaCirclePlus />} />
+            </Link>
             <img src="/Dessert 1 Streamline Lagos.png" alt="desert img" className='mt-5 lg:mt-0' draggable="false" />
             <div className='w-9/10 absolute bottom-0'>
                 <Footer />
