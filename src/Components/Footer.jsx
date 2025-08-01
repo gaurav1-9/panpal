@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaRegCopyright, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { FcLike } from "react-icons/fc";

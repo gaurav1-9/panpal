@@ -1,6 +1,5 @@
 import { FaCirclePlus } from "react-icons/fa6";
 import Button from '../Components/Button';
-import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 const NoRecipe = () => {

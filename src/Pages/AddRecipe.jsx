@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FaCamera } from "react-icons/fa";
 import Button from "../Components/Button";
-import Footer from "../Components/Footer";
 import { FaListCheck } from "react-icons/fa6";
 import { MoonLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
