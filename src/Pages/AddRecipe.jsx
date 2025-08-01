@@ -142,6 +142,7 @@ const AddRecipe = () => {
                                 <option value="1">beverage</option>
                                 <option value="2">sweet dish</option>
                                 <option value="3">appetizers</option>
+                                <option value="4">snacks</option>
                             </select>
                         </div>
                         <textarea
