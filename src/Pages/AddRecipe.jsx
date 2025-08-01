@@ -110,7 +110,7 @@ const AddRecipe = () => {
                         <input
                             type="file"
                             id="image-upload"
-                            accept="image/*"
+                            accept="image/jpeg,image/jpg,image/png"
                             onChange={handleImageChange}
                             className="hidden"
                             disabled={isSaving}

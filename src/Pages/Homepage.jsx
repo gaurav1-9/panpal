@@ -1,24 +1,31 @@
 import { useEffect, useState } from 'react'
 import NoRecipe from '../Components/NoRecipe';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import RecipeListing from '../Components/RecipeListing';
 
 const Homepage = () => {
     const location = useLocation()
+    const navigate = useNavigate();
     const [nickname, setNickname] = useState('')
     const [recipe, setRecipe] = useState([])
     const [showMsg, setShowMsg] = useState(location.state?.showMsg || false)
 
     useEffect(() => {
-        setNickname(localStorage.getItem('nickname'))
+        setNickname(localStorage.getItem('nickname') || '')
     }, [nickname])
     useEffect(() => {
-        setRecipe(localStorage.getItem('recipe'))
+        setRecipe(localStorage.getItem('recipeList'))
     }, [recipe])
 
     useEffect(() => {
         if (location.state?.showMsg) {
+            setShowMsg(true);
             setTimeout(() => {
                 setShowMsg(false)
+                navigate(location.pathname, {
+                    replace: true,
+                    state: {}
+                });
             }, 3000);
         }
     }, [showMsg])
@@ -42,7 +49,7 @@ const Homepage = () => {
             </p>
             {
                 (recipe)
-                    ? ''
+                    ? <RecipeListing />
                     : <NoRecipe />
             }
         </div>
