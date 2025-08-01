@@ -147,7 +147,7 @@ const AddRecipe = () => {
                         </div>
                         <textarea
                             placeholder="Write the magic steps here..."
-                            className="border-1 border-blackBean w-full rounded-md px-4 py-2 outline-xanthous resize-none h-40 lg:h-50"
+                            className="border-1 border-blackBean w-full rounded-md px-4 py-2 outline-xanthous resize-none h-40 lg:h-50 scrollbar"
                             value={step}
                             onChange={e => setStep(e.target.value)}
                             disabled={isSaving}
