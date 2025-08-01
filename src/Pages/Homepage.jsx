@@ -21,11 +21,11 @@ const Homepage = () => {
         if (location.state?.showMsg) {
             setShowMsg(true);
             setTimeout(() => {
-                setShowMsg(false)
                 navigate(location.pathname, {
                     replace: true,
                     state: {}
                 });
+                setShowMsg(false)
             }, 3000);
         }
     }, [showMsg])

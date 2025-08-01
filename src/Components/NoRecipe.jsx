@@ -14,9 +14,6 @@ const NoRecipe = () => {
                 <Button icon={<FaCirclePlus />} text={"Add Recipe"} />
             </Link>
             <img src="/Dessert 1 Streamline Lagos.png" alt="desert img" className='mt-5 lg:mt-0' draggable="false" />
-            <div className='w-9/10 absolute bottom-0'>
-                <Footer />
-            </div>
         </div>
     )
 }

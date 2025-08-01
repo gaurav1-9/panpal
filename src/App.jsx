@@ -4,6 +4,7 @@ import InitialForm from './Pages/InitialForm'
 import Homepage from './Pages/Homepage'
 import { Route, Routes } from 'react-router-dom'
 import AddRecipe from './Pages/AddRecipe'
+import Footer from './Components/Footer'
 
 const App = () => {
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'))
@@ -26,6 +27,7 @@ const App = () => {
           </Routes>
           : <InitialForm onSetNickname={handleSetNickname} />
       }
+      <Footer />
     </div>
   )
 }

@@ -28,7 +28,7 @@ const AddRecipe = () => {
     const [isSaving, setisSaving] = useState(false)
     const saveRecipe = (e) => {
         e.preventDefault()
-        if (dishName.trim() || step.trim() || image) {
+        if (dishName.trim() && step.trim() && image) {
             setisSaving(true)
             setTimeout(() => {
                 setisSaving(false)
@@ -162,9 +162,7 @@ const AddRecipe = () => {
                     </form>
                 </div>
             </div>
-            <div className='w-full lg:w-9/10 lg:absolute lg:bottom-0'>
-                <Footer />
-            </div>
+
         </div>
     )
 }
