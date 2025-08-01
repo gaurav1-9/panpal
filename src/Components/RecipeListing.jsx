@@ -44,7 +44,7 @@ const RecipeListing = () => {
                                     {recipes.map((recipe, recipeIndex) => (
                                         <div
                                             key={recipeIndex}
-                                            className="bg-xanthous w-60 lg:w-85 h-74 rounded-lg overflow-clip text-blackBean hover:-translate-y-2 cursor-pointer duration-200 ease-in-out hover:opacity-90"
+                                            className="bg-xanthous w-70 lg:w-85 h-74 rounded-lg overflow-clip text-blackBean hover:-translate-y-2 cursor-pointer duration-200 ease-in-out hover:opacity-90"
                                         >
                                             <div className="w-full h-6/10">
                                                 <img
