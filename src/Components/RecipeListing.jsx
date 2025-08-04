@@ -56,7 +56,7 @@ const RecipeListing = () => {
                                                         />
                                                     </div>
                                                     <div className="p-3">
-                                                        <p className="text-3xl font-semibold">{recipe.recipeName}</p>
+                                                        <p className="text-3xl font-semibold truncate">{recipe.recipeName}</p>
                                                         <div className="line-clamp-2 whitespace-pre-wrap">{recipe.procedure}</div>
                                                     </div>
                                                 </div>
