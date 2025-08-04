@@ -41,24 +41,28 @@ const RecipeListing = () => {
 
                             <div className="flex mt-3 overflow-x-auto scrollbar pb-3">
                                 <div className="flex gap-3 lg:gap-5">
-                                    {recipes.map((recipe, recipeIndex) => (
-                                        <div
-                                            key={recipeIndex}
-                                            className="bg-xanthous w-70 lg:w-85 h-74 rounded-lg overflow-clip text-blackBean hover:-translate-y-2 cursor-pointer duration-200 ease-in-out hover:opacity-90"
-                                        >
-                                            <div className="w-full h-6/10">
-                                                <img
-                                                    src={recipe.image}
-                                                    draggable={false}
-                                                    className="w-full h-full object-cover"
-                                                />
-                                            </div>
-                                            <div className="p-3">
-                                                <p className="text-3xl font-semibold">{recipe.recipeName}</p>
-                                                <div className="line-clamp-2 whitespace-pre-wrap">{recipe.procedure}</div>
-                                            </div>
-                                        </div>
-                                    ))}
+                                    {
+                                        recipes.map((recipe, recipeIndex) => (
+                                            <Link to={`/recipe/${category[recipe.category]}-${recipe.dishID}`}>
+                                                <div
+                                                    key={recipeIndex}
+                                                    className="bg-xanthous w-70 lg:w-85 h-74 rounded-lg overflow-clip text-blackBean hover:-translate-y-2 cursor-pointer duration-200 ease-in-out hover:opacity-90"
+                                                >
+                                                    <div className="w-full h-6/10">
+                                                        <img
+                                                            src={recipe.image}
+                                                            draggable={false}
+                                                            className="w-full h-full object-cover"
+                                                        />
+                                                    </div>
+                                                    <div className="p-3">
+                                                        <p className="text-3xl font-semibold">{recipe.recipeName}</p>
+                                                        <div className="line-clamp-2 whitespace-pre-wrap">{recipe.procedure}</div>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>

@@ -42,6 +42,7 @@ const AddRecipe = () => {
                 })
             }, 2000);
             const recipeDate = {
+                dishID: Date.now() + Math.floor(Math.random()*100),
                 recipeName: dishName,
                 procedure: step,
                 image: image,
@@ -51,8 +52,6 @@ const AddRecipe = () => {
             existingRecipes.push(recipeDate);
 
             localStorage.setItem("recipeList", JSON.stringify(existingRecipes));
-
-
         }
         else {
             setisEmpty(true)

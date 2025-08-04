@@ -5,6 +5,7 @@ import Homepage from './Pages/Homepage'
 import { Route, Routes } from 'react-router-dom'
 import AddRecipe from './Pages/AddRecipe'
 import Footer from './Components/Footer'
+import ViewRecipe from './Pages/ViewRecipe'
 
 const App = () => {
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'))
@@ -56,6 +57,7 @@ const App = () => {
             <Routes>
               <Route path='/' element={<Homepage />} />
               <Route path='/add' element={<AddRecipe />} />
+              <Route path='/recipe/:recipeID' element={<ViewRecipe />} />
             </Routes>
             <Footer bgColor={'bg-seashell'} />
           </>
