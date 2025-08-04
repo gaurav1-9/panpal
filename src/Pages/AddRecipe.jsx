@@ -23,11 +23,13 @@ const AddRecipe = () => {
     };
     const [dishName, setDishName] = useState("")
     const [step, setStep] = useState("")
+    const [equipments, setEquipments] = useState("")
+    const [ingredients, setIngredients] = useState("")
     const [isEmpty, setisEmpty] = useState(false)
     const [isSaving, setisSaving] = useState(false)
     const saveRecipe = (e) => {
         e.preventDefault()
-        if (dishName.trim() && step.trim() && image) {
+        if (dishName.trim() && step.trim() && ingredients.trim() && equipments.trim() && image) {
             setisSaving(true)
             setTimeout(() => {
                 setisSaving(false)
@@ -44,6 +46,8 @@ const AddRecipe = () => {
             const recipeDate = {
                 dishID: Date.now() + Math.floor(Math.random()*100),
                 recipeName: dishName,
+                ingredients: ingredients,
+                equipments: equipments,
                 procedure: step,
                 image: image,
                 category: category
@@ -64,7 +68,7 @@ const AddRecipe = () => {
     return (
         <div className='px-4 lg:px-26 mt-5 lg:mt-12 font-kurb h-fit'>
 
-            <div className={`z-50 fixed lg:absolute ${(isEmpty)
+            <div className={`z-50 fixed ${(isEmpty)
                 ? 'top-22 lg:top-36 opacity-100'
                 : 'top-17 lg:top-31'
                 } opacity-0 left-0 w-full flex justify-center items-center duration-500 ease-in-out`}>
@@ -143,6 +147,20 @@ const AddRecipe = () => {
                                 <option value="4">snacks</option>
                             </select>
                         </div>
+                        <textarea
+                            placeholder="Write the ingredients required here..."
+                            className="border-1 border-blackBean w-full rounded-md px-4 py-2 outline-xanthous resize-none h-40 lg:h-20 scrollbar"
+                            value={ingredients}
+                            onChange={e => setIngredients(e.target.value)}
+                            disabled={isSaving}
+                        />
+                        <textarea
+                            placeholder="Write the list of equiments required here..."
+                            className="border-1 border-blackBean w-full rounded-md px-4 py-2 outline-xanthous resize-none h-40 lg:h-20 scrollbar"
+                            value={equipments}
+                            onChange={e => setEquipments(e.target.value)}
+                            disabled={isSaving}
+                        />
                         <textarea
                             placeholder="Write the magic steps here..."
                             className="border-1 border-blackBean w-full rounded-md px-4 py-2 outline-xanthous resize-none h-40 lg:h-50 scrollbar"
