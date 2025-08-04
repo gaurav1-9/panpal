@@ -39,8 +39,8 @@ const InitialForm = ({ onSetNickname }) => {
                     <FaArrowRightLong className='text-xl lg:text-3xl' />
                 </button>
             </form>
-            <div className='absolute bottom-0'>
-                <Footer />
+            <div className='absolute bottom-0 w-full'>
+                <Footer bgColor={'bg-xanthous'}/>
             </div>
         </div>
     )

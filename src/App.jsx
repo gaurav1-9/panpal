@@ -21,13 +21,15 @@ const App = () => {
       <Navbar />
       {
         nickname
-          ? <Routes>
-            <Route path='/' element={<Homepage />} />
-            <Route path='/add' element={<AddRecipe />} />
-          </Routes>
+          ? <>
+            <Routes>
+              <Route path='/' element={<Homepage />} />
+              <Route path='/add' element={<AddRecipe />} />
+            </Routes>
+            <Footer bgColor={'bg-seashell'}/>
+          </>
           : <InitialForm onSetNickname={handleSetNickname} />
       }
-      <Footer />
     </div>
   )
 }

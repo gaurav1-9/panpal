@@ -2,11 +2,11 @@ import { FaRegCopyright, FaInstagram, FaGithub, FaLinkedin } from "react-icons/f
 import { TbWorld } from "react-icons/tb";
 import { FcLike } from "react-icons/fc";
 
-const Footer = () => {
+const Footer = ({bgColor}) => {
     const currentYear = new Date().getFullYear()
     const devYear = 2025
     return (
-        <div className='text-blackBean flex flex-col lg:flex-row items-center font-kurb justify-center w-full gap-4 bg-seashell sticky bottom-0 pt-2'>
+        <div className={`text-blackBean flex flex-col lg:flex-row items-center font-kurb justify-center w-full gap-4 ${bgColor} sticky bottom-0 pt-2`}>
             <div className='flex items-center gap-1 text-lg leading-0 lg:text-lg'>
                 <FaRegCopyright />
                 <p>{`${(devYear === currentYear) ? devYear : `${devYear} - ${currentYear}`}`}</p>
