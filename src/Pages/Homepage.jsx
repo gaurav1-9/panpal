@@ -33,7 +33,7 @@ const Homepage = () => {
         <div className='px-4 lg:px-26 mt-5 lg:mt-12 font-kurb h-fit w-full'>
             {
                 showMsg &&
-                <div className={`z-50 fixed lg:absolute ${(location.state.showMsg)
+                <div className={`z-20 fixed lg:absolute ${(location.state.showMsg)
                     ? 'top-22 lg:top-36 opacity-100'
                     : 'top-17 lg:top-31'
                     } opacity-0 left-0 w-full flex justify-center items-center duration-500 ease-in-out`}>

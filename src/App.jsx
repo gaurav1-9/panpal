@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './Components/Navbar'
 import InitialForm from './Pages/InitialForm'
 import Homepage from './Pages/Homepage'
@@ -8,6 +8,7 @@ import Footer from './Components/Footer'
 
 const App = () => {
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'))
+  const [searchBtn, setsearchBtn] = useState(false)
 
   const handleSetNickname = (name) => {
     localStorage.setItem('nickname', name)
@@ -16,9 +17,39 @@ const App = () => {
     }, 400);
   }
 
+  const searchingBtn = () => {
+    setsearchBtn(!searchBtn)
+  }
+
+  useEffect(() => {
+    if (searchBtn) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [searchBtn])
+
   return (
     <div>
-      <Navbar />
+      <Navbar searchingBtn={searchingBtn} searchBtn={searchBtn} />
+      {
+        searchBtn &&
+        <div
+          className='absolute top-0 right-0 backdrop-blur-md z-30 w-screen h-full  font-kurb'
+          onClick={() => setsearchBtn(false)}
+        >
+          <div 
+          className='w-full lg:w-150 lg:right-0 lg:absolute px-4 lg:px-26 pt-25 lg:pt-38 h-30 lg:h-full bg-xanthous'
+          onClick={(e) => e.stopPropagation()}
+          >
+            skljslk
+          </div>
+        </div>
+      }
       {
         nickname
           ? <>
@@ -26,7 +57,7 @@ const App = () => {
               <Route path='/' element={<Homepage />} />
               <Route path='/add' element={<AddRecipe />} />
             </Routes>
-            <Footer bgColor={'bg-seashell'}/>
+            <Footer bgColor={'bg-seashell'} />
           </>
           : <InitialForm onSetNickname={handleSetNickname} />
       }

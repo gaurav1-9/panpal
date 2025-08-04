@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 import { IoSearchOutline } from "react-icons/io5";
+import { FaXmark } from "react-icons/fa6";
 
-const Navbar = () => {
+const Navbar = ({ searchingBtn, searchBtn }) => {
     return (
-        <div className='sticky top-0 left-0 flex justify-between items-center bg-xanthous px-4 lg:px-26 py-4 lg:py-2 z-10'>
+        <div className='sticky top-0 left-0 flex justify-between items-center bg-xanthous px-4 lg:px-26 py-4 lg:py-2 z-50'>
             <Link to={'/'}>
                 <div className='flex gap-2 lg:gap-4'>
                     <img
@@ -17,13 +18,16 @@ const Navbar = () => {
                     </div>
                 </div>
             </Link>
-            {
-                localStorage.getItem('nickname')
-                    ? <div className="shadow-lg rounded-full p-2 lg:p-4 cursor-pointer hover:scale-[1.05] duration-100 hover:bg-night/2 ">
-                        <IoSearchOutline className="text-2xl lg:text-4xl text-seashell "/>
-                    </div>
-                    : null
-            }
+            <button
+                className="shadow-lg rounded-full p-2 lg:p-4 cursor-pointer hover:scale-[1.05] duration-100 hover:bg-night/2 "
+                onClick={searchingBtn}
+            >
+                {
+                    (searchBtn)
+                    ?<FaXmark className="text-2xl lg:text-4xl text-seashell " />
+                    :<IoSearchOutline className="text-2xl lg:text-4xl text-seashell " />
+                    }
+            </button>
         </div>
     )
 }
