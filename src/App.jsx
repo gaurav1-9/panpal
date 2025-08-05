@@ -40,7 +40,7 @@ const App = () => {
     <div>
       <Navbar searchingBtn={searchingBtn} searchBtn={searchBtn} nickname={nickname} recipeAdded={recipeAdded} />
       {
-        searchBtn && <Search />
+        searchBtn && <Search searchingBtn={searchingBtn}/>
       }
       {
         nickname

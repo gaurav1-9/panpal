@@ -2,8 +2,9 @@ import { useState } from "react";
 import Button from "./Button"
 import { LuTextSearch } from "react-icons/lu";
 import { MoonLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
-const Search = () => {
+const Search = ({ searchingBtn }) => {
     const [searchInput, setSearchInput] = useState('')
     const [showInput, setShowInput] = useState(null)
     const [isSearching, setIsSearching] = useState(false)
@@ -19,6 +20,7 @@ const Search = () => {
                 recipe.equipments.toLowerCase().includes(searchInput.toLowerCase())
             )
         setFilteredList(filtered);
+        return filtered
     }
     const category = [
         'main course',
@@ -32,9 +34,9 @@ const Search = () => {
         if (searchInput.trim()) {
             setIsSearching(true)
             setTimeout(() => {
+                const result = searchResult()
                 setIsSearching(false)
-                searchResult()
-                setSearchInput('')
+                if (result.length !== 0) setSearchInput('')
             }, 700);
         }
         else {
@@ -46,10 +48,10 @@ const Search = () => {
     }
     return (
         <div
-            className='absolute top-0 right-0 backdrop-blur-md z-30 w-screen h-full  font-kurb'
+            className='fixed top-0 right-0 backdrop-blur-md z-30 w-screen h-full  font-kurb'
         >
             <div
-                className='w-full lg:w-150 lg:right-0 lg:absolute px-4 lg:px-6 pt-25 lg:pt-38 h-fit py-3 lg:h-full bg-seashell shadow-[-4px_0_17px_rgba(0,0,0,0.1)]'
+                className='w-full lg:w-150 lg:right-0 lg:absolute px-4 lg:px-6 pt-25 md:pt-43 lg:pt-38 h-fit py-3 lg:h-full bg-seashell shadow-[-4px_0_17px_rgba(0,0,0,0.1)]'
             >
                 <form
                     className="relative text-base lg:text-xl flex flex-col"
@@ -83,7 +85,7 @@ const Search = () => {
                 </form>
                 {
                     showInput &&
-                    <div className="mt-3 flex flex-col gap-2 max-h-50 lg:max-h-full overflow-y-auto overflow-x-hidden scrollbar pr-2">
+                    <div className="mt-3 flex flex-col gap-2 max-h-53 lg:max-h-80 overflow-y-auto overflow-x-hidden scrollbar pr-2">
                         {
                             (filteredList.length !== 0) &&
                             <p className="text-sm text-blackBean font-light">Search results for <span className="font-semibold">{showInput}</span>...</p>
@@ -91,16 +93,21 @@ const Search = () => {
                         {
                             (filteredList.length > 0 && showInput)
                                 ? filteredList.map((recipe, index) => (
-                                    <div
-                                        key={index}
-                                        className="bg-xanthous w-full rounded-lg flex overflow-clip p-2 text-blackBean font-kurb font-semibold items-center gap-3 h-fit hover:opacity-95 cursor-pointer hover:ml-1 ease-in-out duration-200"
+                                    <Link
+                                        to={`/recipe/${category[recipe.category]}-${recipe.dishID}`}
+                                        onClick={searchingBtn}
                                     >
-                                        <img src={recipe.image} className="w-15 aspect-square object-cover rounded-lg" />
-                                        <div>
-                                            <p className="text-xl">{recipe.recipeName}</p>
-                                            <p className="text-sm rounded-full bg-blackBean text-seashell px-4 py-1 w-fit">{category[recipe.category]}</p>
+                                        <div
+                                            key={index}
+                                            className="bg-xanthous w-full rounded-lg flex overflow-clip p-2 text-blackBean font-kurb font-semibold items-center gap-3 h-fit hover:opacity-95 cursor-pointer hover:ml-1 ease-in-out duration-200"
+                                        >
+                                            <img src={recipe.image} className="w-15 aspect-square object-cover rounded-lg" />
+                                            <div>
+                                                <p className="text-xl">{recipe.recipeName}</p>
+                                                <p className="text-sm rounded-full bg-blackBean text-seashell px-4 py-1 w-fit">{category[recipe.category]}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))
                                 : <div className="flex justify-start items-center my-2">
                                     <img src="/Searching 1 Streamline Lagos.png" className="aspect-square w-40" />
