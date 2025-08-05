@@ -6,21 +6,22 @@ A web-based personalized recipe book
 
 ## 📸 Project Screenshots
 <p align="center">
-<img src="./SS/mob_init.png" alt="Image 1" style="height:150"/>
-<img src="./SS/init.png" alt="Image 1" style="height:150"/>
+  <img src="./SS/mob_init.png" alt="Mobile Init" height="300"/>
+  <img src="./SS/init.png" alt="Desktop Init" height="300"/>
 </p>
 <p align="center">
-<img src="./SS/home.png" alt="Image 1" style="height:150"/>
-<img src="./SS/mob_home.png" alt="Image 1" style="height:150"/>
+  <img src="./SS/mob_home.png" alt="Mobile Home" height="300"/>
+  <img src="./SS/home.png" alt="Desktop Home" height="300"/>
 </p>
 <p align="center">
-<img src="./SS/mob_add.png" alt="Image 1" style="height:150"/>
-<img src="./SS/add.png" alt="Image 1" style="height:150"/>
+  <img src="./SS/mob_add.png" alt="Mobile Add" height="300"/>
+  <img src="./SS/add.png" alt="Desktop Add" height="300"/>
 </p>
 <p align="center">
-<img src="./SS/view.png" alt="Image 1" style="height:150"/>
-<img src="./SS/mob_view.png" alt="Image 1" style="height:150"/>
+  <img src="./SS/mob_view.png" alt="Mobile View" height="300"/>
+  <img src="./SS/view.png" alt="Desktop View" height="300"/>
 </p>
+
 
 ## 💻 Tech Stack
 - React.js
