@@ -5,15 +5,36 @@ import { MoonLoader } from "react-spinners";
 
 const Search = () => {
     const [searchInput, setSearchInput] = useState('')
+    const [showInput, setShowInput] = useState(null)
     const [isSearching, setIsSearching] = useState(false)
     const [isEmpty, setIsEmpty] = useState(false)
+    const recipeList = JSON.parse(localStorage.getItem('recipeList'))
+    const [filteredList, setFilteredList] = useState([])
+    const searchResult = () => {
+        setShowInput(searchInput)
+        const filtered = recipeList
+            .filter(recipe =>
+                recipe.recipeName.toLowerCase().includes(searchInput.toLowerCase()) ||
+                recipe.ingredients.toLowerCase().includes(searchInput.toLowerCase()) ||
+                recipe.equipments.toLowerCase().includes(searchInput.toLowerCase())
+            )
+        setFilteredList(filtered);
+    }
+    const category = [
+        'main course',
+        'beverage',
+        'sweet dish',
+        'appetizers',
+        'snacks'
+    ]
     const searching = (e) => {
         e.preventDefault()
         if (searchInput.trim()) {
-            console.log(searchInput)
             setIsSearching(true)
             setTimeout(() => {
                 setIsSearching(false)
+                searchResult()
+                setSearchInput('')
             }, 700);
         }
         else {
@@ -60,6 +81,37 @@ const Search = () => {
                         isSaving={isSearching}
                     />
                 </form>
+                {
+                    showInput &&
+                    <div className="mt-3 flex flex-col gap-2 max-h-50 lg:max-h-full overflow-y-auto overflow-x-hidden scrollbar pr-2">
+                        {
+                            (filteredList.length !== 0) &&
+                            <p className="text-sm text-blackBean font-light">Search results for <span className="font-semibold">{showInput}</span>...</p>
+                        }
+                        {
+                            (filteredList.length > 0 && showInput)
+                                ? filteredList.map((recipe, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-xanthous w-full rounded-lg flex overflow-clip p-2 text-blackBean font-kurb font-semibold items-center gap-3 h-fit hover:opacity-95 cursor-pointer hover:ml-1 ease-in-out duration-200"
+                                    >
+                                        <img src={recipe.image} className="w-15 aspect-square object-cover rounded-lg" />
+                                        <div>
+                                            <p className="text-xl">{recipe.recipeName}</p>
+                                            <p className="text-sm rounded-full bg-blackBean text-seashell px-4 py-1 w-fit">{category[recipe.category]}</p>
+                                        </div>
+                                    </div>
+                                ))
+                                : <div className="flex justify-start items-center my-2">
+                                    <img src="/Searching 1 Streamline Lagos.png" className="aspect-square w-40" />
+                                    <div className="flex flex-col text-blackBean text-lg lg:text-xl font-light">
+                                        <p>Couldn't find anything for </p>
+                                        <p className="font-semibold">{showInput}...</p>
+                                    </div>
+                                </div>
+                        }
+                    </div>
+                }
             </div>
         </div>
     )
