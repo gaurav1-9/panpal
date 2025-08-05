@@ -5,19 +5,19 @@ A web-based personalized recipe book
 🖌️[view Figma design here](https://www.figma.com/design/EG4ULbhkzexIaxxjZ3Fd3y/Recipe-Book---UM-Internship?node-id=0-1&p=f&t=5LQSYaqfeOrtnDdE-0)
 
 ## 📸 Project Screenshots
-<p>
+<p align="center">
 <img src="./SS/mob_init.png" alt="Image 1" style="height:150"/>
 <img src="./SS/init.png" alt="Image 1" style="height:150"/>
 </p>
-<p>
+<p align="center">
 <img src="./SS/home.png" alt="Image 1" style="height:150"/>
 <img src="./SS/mob_home.png" alt="Image 1" style="height:150"/>
 </p>
-<p>
+<p align="center">
 <img src="./SS/mob_add.png" alt="Image 1" style="height:150"/>
 <img src="./SS/add.png" alt="Image 1" style="height:150"/>
 </p>
-<p>
+<p align="center">
 <img src="./SS/view.png" alt="Image 1" style="height:150"/>
 <img src="./SS/mob_view.png" alt="Image 1" style="height:150"/>
 </p>
