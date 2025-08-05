@@ -94,11 +94,11 @@ const Search = ({ searchingBtn }) => {
                             (filteredList.length > 0 && showInput)
                                 ? filteredList.map((recipe, index) => (
                                     <Link
+                                        key={index}
                                         to={`/recipe/${category[recipe.category]}-${recipe.dishID}`}
                                         onClick={searchingBtn}
                                     >
                                         <div
-                                            key={index}
                                             className="bg-xanthous w-full rounded-lg flex overflow-clip p-2 text-blackBean font-kurb font-semibold items-center gap-3 h-fit hover:opacity-95 cursor-pointer hover:ml-1 ease-in-out duration-200"
                                         >
                                             <img src={recipe.image} className="w-15 aspect-square object-cover rounded-lg" />
