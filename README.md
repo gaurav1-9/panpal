@@ -6,8 +6,20 @@ A web-based personalized recipe book
 
 ## 📸 Project Screenshots
 <p>
-<!-- <img src="./SS/inGame.png" alt="Image 1" style="width:49.5%"/>
-<img src="./SS/gameStart.png" alt="Image 1" style="width:49.5%"/> -->
+<img src="./SS/mob_init.png" alt="Image 1" style="height:300"/>
+<img src="./SS/init.png" alt="Image 1" style="height:300"/>
+</p>
+<p>
+<img src="./SS/home.png" alt="Image 1" style="height:300"/>
+<img src="./SS/mob_home.png" alt="Image 1" style="height:300"/>
+</p>
+<p>
+<img src="./SS/mob_add.png" alt="Image 1" style="height:300"/>
+<img src="./SS/add.png" alt="Image 1" style="height:300"/>
+</p>
+<p>
+<img src="./SS/view.png" alt="Image 1" style="height:300"/>
+<img src="./SS/mob_view.png" alt="Image 1" style="height:300"/>
 </p>
 
 ## 💻 Tech Stack
@@ -17,7 +29,7 @@ A web-based personalized recipe book
 ## 🪄 Installation
 1. Clone the project from [Github](https://github.com/gaurav1-9/panpal)
 ```bash
-git clone https://github.com/gaurav1-9/panpal
+git clone https://github.com/gaurav1-9/panpal.git
 cd flipperrr
 ```
 2. Install the dependencies using ```npm i```
