@@ -6,20 +6,20 @@ A web-based personalized recipe book
 
 ## 📸 Project Screenshots
 <p>
-<img src="./SS/mob_init.png" alt="Image 1" style="height:300"/>
-<img src="./SS/init.png" alt="Image 1" style="height:300"/>
+<img src="./SS/mob_init.png" alt="Image 1" style="height:150"/>
+<img src="./SS/init.png" alt="Image 1" style="height:150"/>
 </p>
 <p>
-<img src="./SS/home.png" alt="Image 1" style="height:300"/>
-<img src="./SS/mob_home.png" alt="Image 1" style="height:300"/>
+<img src="./SS/home.png" alt="Image 1" style="height:150"/>
+<img src="./SS/mob_home.png" alt="Image 1" style="height:150"/>
 </p>
 <p>
-<img src="./SS/mob_add.png" alt="Image 1" style="height:300"/>
-<img src="./SS/add.png" alt="Image 1" style="height:300"/>
+<img src="./SS/mob_add.png" alt="Image 1" style="height:150"/>
+<img src="./SS/add.png" alt="Image 1" style="height:150"/>
 </p>
 <p>
-<img src="./SS/view.png" alt="Image 1" style="height:300"/>
-<img src="./SS/mob_view.png" alt="Image 1" style="height:300"/>
+<img src="./SS/view.png" alt="Image 1" style="height:150"/>
+<img src="./SS/mob_view.png" alt="Image 1" style="height:150"/>
 </p>
 
 ## 💻 Tech Stack
