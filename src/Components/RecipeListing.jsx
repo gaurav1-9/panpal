@@ -43,9 +43,11 @@ const RecipeListing = () => {
                                 <div className="flex gap-3 lg:gap-5">
                                     {
                                         recipes.map((recipe, recipeIndex) => (
-                                            <Link to={`/recipe/${category[recipe.category]}-${recipe.dishID}`}>
+                                            <Link
+                                                key={recipeIndex}
+                                                to={`/recipe/${category[recipe.category]}-${recipe.dishID}`}
+                                            >
                                                 <div
-                                                    key={recipeIndex}
                                                     className="bg-xanthous w-70 lg:w-85 h-74 rounded-lg overflow-clip text-blackBean hover:-translate-y-2 cursor-pointer duration-200 ease-in-out hover:opacity-90"
                                                 >
                                                     <div className="w-full h-6/10">

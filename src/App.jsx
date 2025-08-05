@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import AddRecipe from './Pages/AddRecipe'
 import Footer from './Components/Footer'
 import ViewRecipe from './Pages/ViewRecipe'
+import Search from './Components/Search'
 
 const App = () => {
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'))
@@ -39,18 +40,7 @@ const App = () => {
     <div>
       <Navbar searchingBtn={searchingBtn} searchBtn={searchBtn} nickname={nickname} recipeAdded={recipeAdded} />
       {
-        searchBtn &&
-        <div
-          className='absolute top-0 right-0 backdrop-blur-md z-30 w-screen h-full  font-kurb'
-          onClick={() => setsearchBtn(false)}
-        >
-          <div
-            className='w-full lg:w-150 lg:right-0 lg:absolute px-4 lg:px-26 pt-25 lg:pt-38 h-30 lg:h-full bg-xanthous'
-            onClick={(e) => e.stopPropagation()}
-          >
-            skljslk
-          </div>
-        </div>
+        searchBtn && <Search />
       }
       {
         nickname
