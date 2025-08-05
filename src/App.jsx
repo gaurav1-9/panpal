@@ -9,6 +9,7 @@ import ViewRecipe from './Pages/ViewRecipe'
 
 const App = () => {
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'))
+  const [recipeAdded, setRecipeAdded] = useState(localStorage.getItem('recipeList') || false)
   const [searchBtn, setsearchBtn] = useState(false)
 
   const handleSetNickname = (name) => {
@@ -36,16 +37,16 @@ const App = () => {
 
   return (
     <div>
-      <Navbar searchingBtn={searchingBtn} searchBtn={searchBtn} />
+      <Navbar searchingBtn={searchingBtn} searchBtn={searchBtn} nickname={nickname} recipeAdded={recipeAdded} />
       {
         searchBtn &&
         <div
           className='absolute top-0 right-0 backdrop-blur-md z-30 w-screen h-full  font-kurb'
           onClick={() => setsearchBtn(false)}
         >
-          <div 
-          className='w-full lg:w-150 lg:right-0 lg:absolute px-4 lg:px-26 pt-25 lg:pt-38 h-30 lg:h-full bg-xanthous'
-          onClick={(e) => e.stopPropagation()}
+          <div
+            className='w-full lg:w-150 lg:right-0 lg:absolute px-4 lg:px-26 pt-25 lg:pt-38 h-30 lg:h-full bg-xanthous'
+            onClick={(e) => e.stopPropagation()}
           >
             skljslk
           </div>
@@ -56,7 +57,7 @@ const App = () => {
           ? <>
             <Routes>
               <Route path='/' element={<Homepage />} />
-              <Route path='/add' element={<AddRecipe />} />
+              <Route path='/add' element={<AddRecipe setRecipeAdded={setRecipeAdded} />} />
               <Route path='/recipe/:recipeID' element={<ViewRecipe />} />
             </Routes>
             <Footer bgColor={'bg-seashell'} />

@@ -1,12 +1,28 @@
-# React + Vite
+# PanPal 
+A web-based personalized recipe book
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗[flipperrr - Live Link](https://panpal.vercel.app/)\
+🖌️[view Figma design here](https://www.figma.com/design/EG4ULbhkzexIaxxjZ3Fd3y/Recipe-Book---UM-Internship?node-id=0-1&p=f&t=5LQSYaqfeOrtnDdE-0)
 
-Currently, two official plugins are available:
+## 📸 Project Screenshots
+<p>
+<!-- <img src="./SS/inGame.png" alt="Image 1" style="width:49.5%"/>
+<img src="./SS/gameStart.png" alt="Image 1" style="width:49.5%"/> -->
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💻 Tech Stack
+- React.js
+- TailwindCSS
 
-## Expanding the ESLint configuration
+## 🪄 Installation
+1. Clone the project from [Github](https://github.com/gaurav1-9/panpal)
+```bash
+git clone https://github.com/gaurav1-9/panpal
+cd flipperrr
+```
+2. Install the dependencies using ```npm i```
+3. Start the Development Server using the command ```npm run dev```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🤝 Contributing
+
+Feel free to explore the live site and connect with me for feedback or collaboration! 😉✌️

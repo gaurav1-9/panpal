@@ -5,7 +5,7 @@ import { FaListCheck } from "react-icons/fa6";
 import { MoonLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
 
-const AddRecipe = () => {
+const AddRecipe = ({setRecipeAdded}) => {
     const navigate = useNavigate()
     const [image, setImage] = useState(null);
     const [category, setCategory] = useState(0)
@@ -42,7 +42,8 @@ const AddRecipe = () => {
                     },
                     replace: true
                 })
-            }, 2000);
+                setRecipeAdded(true)
+            }, 1000);
             const recipeDate = {
                 dishID: Date.now() + Math.floor(Math.random()*100),
                 recipeName: dishName,
