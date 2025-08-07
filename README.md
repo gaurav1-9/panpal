@@ -35,7 +35,7 @@ A web-based personalized recipe book
 1. Clone the project from [Github](https://github.com/gaurav1-9/panpal)
 ```bash
 git clone https://github.com/gaurav1-9/panpal.git
-cd flipperrr
+cd panpal
 ```
 2. Install the dependencies using ```npm i```
 3. Start the Development Server using the command ```npm run dev```
