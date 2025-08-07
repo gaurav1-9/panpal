@@ -21,6 +21,10 @@ A web-based personalized recipe book
   <img src="./SS/mob_view.png" alt="Mobile View" height="300"/>
   <img src="./SS/view.png" alt="Desktop View" height="300"/>
 </p>
+<p align="center">
+  <img src="./SS/search.png" alt="Desktop View" height="272"/>
+  <img src="./SS/mob_search.png" alt="Mobile View" height="272"/>
+</p>
 
 
 ## 💻 Tech Stack
