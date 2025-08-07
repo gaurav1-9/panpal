@@ -1,7 +1,7 @@
 # PanPal 
 A web-based personalized recipe book
 
-🔗[flipperrr - Live Link](https://panpal.vercel.app/)\
+🔗[PanPal - Live Link](https://panpal.vercel.app/)\
 🖌️[view Figma design here](https://www.figma.com/design/EG4ULbhkzexIaxxjZ3Fd3y/Recipe-Book---UM-Internship?node-id=0-1&p=f&t=5LQSYaqfeOrtnDdE-0)
 
 ## 📸 Project Screenshots
